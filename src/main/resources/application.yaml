@@ -1,0 +1,19 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: redis-cache
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  cache:
+#    指定缓存为redis
+    type: redis
+caching:
+  specs:
+      #  test1 缓存过期时间60s
+    - cacheName: test1
+      timeout: 60
+      #  test2 缓存过期时间10s
+    - cacheName: test2
+      timeout: 10
